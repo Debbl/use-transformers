@@ -1,0 +1,69 @@
+{
+  "name": "use-transformers",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.14.4",
+  "description": "",
+  "author": "Brendan Dash <me@aiwan.run> (https://aiwan.run)",
+  "license": "MIT",
+  "homepage": "https://github.com/Debbl/use-transformers#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debbl/use-transformers.git"
+  },
+  "bugs": "https://github.com/Debbl/use-transformers/issues",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm build && node ./dist/index.cjs",
+    "build": "rimraf dist && rollup -c --configPlugin typescript",
+    "test": "vitest",
+    "release": "pnpm build && bumpp && pnpm publish",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@debbl/eslint-config": "^3.8.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.10.1",
+    "bumpp": "^9.8.1",
+    "eslint": "^9.16.0",
+    "lint-staged": "^15.2.10",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.28.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
