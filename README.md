@@ -1,6 +1,6 @@
 # use-transformers
 
-Simplify use transformers.js with react in browser.
+Easily use transformers.js with react in browser.
 
 ```tsx
 import { useState } from "react";
@@ -38,6 +38,8 @@ export default function Home() {
   );
 }
 ```
+
+## feature
 
 - use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
 
