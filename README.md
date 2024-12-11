@@ -1,6 +1,6 @@
 # use-transformers
 
-easy to use transformers with react in browser.
+Simplify use transformers.js with react in browser.
 
 ```tsx
 import { useState } from "react";
