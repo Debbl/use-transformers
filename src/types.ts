@@ -1,5 +1,7 @@
 import type { PipelineType, ProgressInfo } from "@huggingface/transformers";
 
+export type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+
 export interface PretrainedModelOptions {
   progress_callback?: (progress: any) => void;
   config?: any;

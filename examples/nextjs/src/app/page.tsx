@@ -8,7 +8,7 @@ export default function Home() {
   const [input, setInput] = useState("I love transformers!");
 
   const { data, isLoading, mutate } = useTransformers({
-    task: "sentiment-analysis",
+    task: "object-detection",
     options: {
       dtype: "q8",
     },
