@@ -43,6 +43,36 @@ export default function Home() {
 
 - use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
 
+> next.config.ts
+
+```ts
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import type { NextConfig } from "next";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const nextConfig: NextConfig = {
+  webpack: (config) => {
+    // https://github.com/huggingface/transformers.js/issues/1026#issuecomment-2490410996
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "sharp$": false,
+      "onnxruntime-node$": false,
+      "@huggingface/transformers": path.resolve(
+        __dirname,
+        "node_modules/@huggingface/transformers",
+      ),
+    };
+
+    return config;
+  },
+};
+
+export default nextConfig;
+```
+
 ## examples
 
 - [Next.js](./examples/nextjs/)
