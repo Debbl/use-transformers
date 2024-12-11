@@ -1,4 +1,6 @@
 {
   "eslint.useFlatConfig": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": ["Birpc", "dtype", "huggingface", "pipline", "Pretrained"],
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }
