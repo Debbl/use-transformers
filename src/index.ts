@@ -41,7 +41,7 @@ export function useTransformers<T extends PipelineType>({
           setProgressInfo(data);
 
           if (data.status === "ready") {
-            setIsLoading(true);
+            setIsLoading(false);
           }
         },
       },
