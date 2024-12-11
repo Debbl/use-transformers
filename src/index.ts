@@ -12,7 +12,7 @@ export function useTransformers<T extends PipelineType>({
   const rpc = useRef<BirpcReturn<ServerFunctions, ClientFunctions>>(null);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<any>(undefined);
+  const [data, setData] = useState<any>();
   const [progressInfo, setProgressInfo] = useState<ProgressInfo>();
 
   const mutate = async (...data: any) => {
