@@ -43,6 +43,10 @@ export default function Home() {
 
 - use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
 
+## examples
+
+- [Next.js](./examples/nextjs/)
+
 > next.config.ts
 
 ```ts
@@ -72,10 +76,6 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 ```
-
-## examples
-
-- [Next.js](./examples/nextjs/)
 
 ## credits
 
