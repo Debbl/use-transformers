@@ -23,5 +23,5 @@ export interface ClientFunctions {
 }
 
 export interface ServerFunctions {
-  mutate: (data: PipelineProps & { data: Array<any> }) => any;
+  pipeline: (data: PipelineProps & { data: Array<any> }) => any;
 }

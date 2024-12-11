@@ -5,7 +5,7 @@ import type { ClientFunctions, ServerFunctions } from "./types";
 
 const rpc = createBirpc<ClientFunctions, ServerFunctions>(
   {
-    mutate: async (e) => {
+    pipeline: async (e) => {
       const pipe = await pipeline(e.task, e.model, {
         ...e.options,
         progress_callback: (x) => {

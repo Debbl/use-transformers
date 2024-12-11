@@ -18,7 +18,7 @@ export function useTransformers<T extends PipelineType>({
   const mutate = async (...data: any) => {
     setIsLoading(true);
 
-    const result = await rpc.current?.mutate({
+    const result = await rpc.current?.pipeline({
       task,
       model,
       options,
