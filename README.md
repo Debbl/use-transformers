@@ -2,6 +2,12 @@
 
 Easily use transformers.js with react in browser.
 
+## install
+
+```bash
+npm install use-transformers
+```
+
 ```tsx
 import { useState } from "react";
 import { useTransformers } from "use-transformers";
