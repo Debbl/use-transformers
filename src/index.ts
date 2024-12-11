@@ -11,11 +11,13 @@ export function useTransformers<T extends PipelineType>({
 }: PipelineProps<T>) {
   const rpc = useRef<BirpcReturn<ServerFunctions, ClientFunctions>>(null);
 
+  const [isReady, setIsReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState<any>();
   const [progressInfo, setProgressInfo] = useState<ProgressInfo>();
 
   const mutate = async (...data: any) => {
+    setIsReady(false);
     setIsLoading(true);
 
     const result = await rpc.current?.pipeline({
@@ -25,6 +27,7 @@ export function useTransformers<T extends PipelineType>({
       data,
     });
 
+    setIsLoading(false);
     setData(result);
 
     return result;
@@ -39,10 +42,7 @@ export function useTransformers<T extends PipelineType>({
       {
         progress: (data) => {
           setProgressInfo(data);
-
-          if (data.status === "ready") {
-            setIsLoading(false);
-          }
+          setIsReady(data.status === "ready");
         },
       },
       {
@@ -57,6 +57,7 @@ export function useTransformers<T extends PipelineType>({
   }, []);
 
   return {
+    isReady,
     isLoading,
     data,
     mutate,
