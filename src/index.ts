@@ -16,6 +16,8 @@ export function useTransformers<T extends PipelineType>({
   const [progressInfo, setProgressInfo] = useState<ProgressInfo>();
 
   const mutate = async (...data: any) => {
+    setIsLoading(true);
+
     const result = await rpc.current?.mutate({
       task,
       model,
@@ -37,7 +39,10 @@ export function useTransformers<T extends PipelineType>({
       {
         progress: (data) => {
           setProgressInfo(data);
-          setIsLoading(data.status !== "ready");
+
+          if (data.status === "ready") {
+            setIsLoading(true);
+          }
         },
       },
       {
