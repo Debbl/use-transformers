@@ -45,8 +45,9 @@ export default function Home() {
 }
 ```
 
-## feature
+## features
 
+- react hooks
 - use [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
 
 ## examples
@@ -86,4 +87,5 @@ export default nextConfig;
 ## credits
 
 - [transformers.js](https://github.com/huggingface/transformers.js)
+- [bripc](https://github.com/antfu/birpc)
 - API design [swr](https://github.com/vercel/swr)

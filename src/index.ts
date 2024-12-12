@@ -56,11 +56,14 @@ export function useTransformers<T extends PipelineType>({
       },
       {
         post: (data) => worker.postMessage(data),
-        on: (fn) => worker.addEventListener("message", (e) => fn(e.data)),
+        on: (fn) => worker.addEventListener("message", fn),
+        off: (fn) => worker.removeEventListener("message", fn),
+        deserialize: (e) => e.data,
       },
     );
 
     return () => {
+      rpc.current?.$close();
       worker.terminate();
     };
   }, []);

@@ -21,6 +21,8 @@ const rpc = createBirpc<ClientFunctions, ServerFunctions>(
   },
   {
     post: (data) => self.postMessage(data),
-    on: (fn) => self.addEventListener("message", (e) => fn(e.data)),
+    on: (fn) => self.addEventListener("message", fn),
+    off: (fn) => self.removeEventListener("message", fn),
+    deserialize: (e) => e.data,
   },
 );
