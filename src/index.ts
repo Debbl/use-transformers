@@ -25,7 +25,9 @@ export function useTransformers<T extends PipelineType>({
   const [data, setData] = useState<UnwrapPromise<ReturnType<AllTasks[T]>>>();
   const [progressInfo, setProgressInfo] = useState<ProgressInfo>();
 
-  const mutate = async (...data: any) => {
+  const mutate = async (
+    ...data: Parameters<AllTasks[T]>
+  ): Promise<Awaited<ReturnType<AllTasks[T]>>> => {
     setIsReady(false);
     setIsLoading(true);
 
