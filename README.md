@@ -52,7 +52,11 @@ export default function Home() {
 
 ## examples
 
+- [Vite](./examples/vite/)
+
 - [Next.js](./examples/nextjs/)
+
+For current load worker file in browser, you need to add the following to your `next.config.ts`, see this [issue](https://github.com/huggingface/transformers.js/issues/1026#issuecomment-2490410996) for more information.
 
 > next.config.ts
 
