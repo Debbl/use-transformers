@@ -10,8 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "preview": "vite preview",
-    "prepare": "simple-git-hooks"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.1.2",
@@ -28,17 +27,9 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.16.0",
-    "lint-staged": "^15.2.11",
     "postcss": "^8.4.49",
-    "simple-git-hooks": "^2.11.1",
     "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2",
     "vite": "^6.0.3"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   }
 }
