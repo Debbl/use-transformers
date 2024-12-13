@@ -6,12 +6,7 @@ import type {
   ProgressInfo,
 } from "@huggingface/transformers";
 import type { BirpcReturn } from "birpc";
-import type {
-  ClientFunctions,
-  PipelineProps,
-  ServerFunctions,
-  UnwrapPromise,
-} from "./types";
+import type { ClientFunctions, PipelineProps, ServerFunctions } from "./types";
 
 export function useTransformers<T extends PipelineType>({
   task,
@@ -22,7 +17,7 @@ export function useTransformers<T extends PipelineType>({
 
   const [isReady, setIsReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<UnwrapPromise<ReturnType<AllTasks[T]>>>();
+  const [data, setData] = useState<Awaited<ReturnType<AllTasks[T]>>>();
   const [progressInfo, setProgressInfo] = useState<ProgressInfo>();
 
   const mutate = async (
