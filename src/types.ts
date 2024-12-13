@@ -1,4 +1,9 @@
-import type { PipelineType, ProgressInfo } from "@huggingface/transformers";
+import type {
+  AllTasks,
+  PipelineType,
+  ProgressInfo,
+} from "@huggingface/transformers";
+import type { TransformersEnv } from "./types-shims";
 
 export interface PretrainedModelOptions {
   progress_callback?: (progress: any) => void;
@@ -16,6 +21,8 @@ export interface PipelineProps<T extends PipelineType = PipelineType> {
   task: T;
   model?: string;
   options?: PretrainedModelOptions;
+  env?: TransformersEnv;
+  pipelineCallback?: (pipeline: AllTasks[T]) => void;
 }
 
 export interface ClientFunctions {

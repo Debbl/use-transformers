@@ -6,12 +6,13 @@ import type {
   ProgressInfo,
 } from "@huggingface/transformers";
 import type { BirpcReturn } from "birpc";
-import type { ClientFunctions, PipelineProps, ServerFunctions } from "./types";
+import type { ClientFunctions, PipelineProps, ServerFunctions } from "~/types";
 
 export function useTransformers<T extends PipelineType>({
   task,
   model,
   options,
+  env,
 }: PipelineProps<T>) {
   const rpc = useRef<BirpcReturn<ServerFunctions, ClientFunctions>>(null);
 
@@ -30,6 +31,7 @@ export function useTransformers<T extends PipelineType>({
       task,
       model,
       options,
+      env,
       data,
     });
 

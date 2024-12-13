@@ -5,6 +5,11 @@ export default defineConfig({
   format: "esm",
   outDir: "dist",
   sourcemap: true,
+  esbuildOptions: (options) => {
+    options.alias = {
+      "~": "./src",
+    };
+  },
   dts: true,
   clean: true,
 });

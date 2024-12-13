@@ -40,7 +40,6 @@
     "dist"
   ],
   "scripts": {
-    "dev": "pnpm build && node ./dist/index.cjs",
     "build": "tsup",
     "test": "vitest",
     "release": "pnpm build && bumpp && pnpm publish",
