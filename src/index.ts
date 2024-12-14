@@ -5,16 +5,17 @@ import type {
   PipelineType,
   ProgressInfo,
 } from "@huggingface/transformers";
-import type { BirpcReturn } from "birpc";
-import type { ClientFunctions, PipelineProps, ServerFunctions } from "~/types";
+import type { BirpcOptions, BirpcReturn } from "birpc";
+import type { LocalFunctions, PipelineProps, WorkerFunctions } from "~/types";
 
-export function useTransformers<T extends PipelineType>({
-  task,
-  model,
-  options,
-  env,
-}: PipelineProps<T>) {
-  const rpc = useRef<BirpcReturn<ServerFunctions, ClientFunctions>>(null);
+export function useTransformers<T extends PipelineType>(
+  { task, model, options, env }: PipelineProps<T>,
+  birpcOptions?: {
+    local: BirpcOptions<WorkerFunctions>;
+    worker: BirpcOptions<LocalFunctions>;
+  },
+) {
+  const rpc = useRef<BirpcReturn<WorkerFunctions, LocalFunctions>>(null);
 
   const [isReady, setIsReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -46,7 +47,9 @@ export function useTransformers<T extends PipelineType>({
       type: "module",
     });
 
-    rpc.current = createBirpc<ServerFunctions, ClientFunctions>(
+    worker.postMessage({ status: "init", ...birpcOptions?.worker });
+
+    rpc.current = createBirpc<WorkerFunctions, LocalFunctions>(
       {
         progress: (data) => {
           setProgressInfo(data);
@@ -58,6 +61,7 @@ export function useTransformers<T extends PipelineType>({
         on: (fn) => worker.addEventListener("message", fn),
         off: (fn) => worker.removeEventListener("message", fn),
         deserialize: (e) => e.data,
+        ...birpcOptions?.local,
       },
     );
 

@@ -25,10 +25,10 @@ export interface PipelineProps<T extends PipelineType = PipelineType> {
   pipelineCallback?: (pipeline: AllTasks[T]) => void;
 }
 
-export interface ClientFunctions {
+export interface LocalFunctions {
   progress: (data: ProgressInfo) => void;
 }
 
-export interface ServerFunctions {
+export interface WorkerFunctions {
   pipeline: (data: PipelineProps & { data: Array<any> }) => any;
 }
