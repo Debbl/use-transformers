@@ -3,7 +3,7 @@ import { useTransformers } from "use-transformers";
 
 function Index() {
   const [input, setInput] = useState("I love transformers!");
-  const { isLoading, progressInfo, data, mutate } = useTransformers({
+  const { isLoading, progressInfo, data, transformer } = useTransformers({
     task: "sentiment-analysis",
     options: {
       dtype: "q8",
@@ -13,7 +13,7 @@ function Index() {
   const handleClick = () => {
     if (!input) return;
 
-    mutate(input);
+    transformer(input);
   };
 
   return (

@@ -7,7 +7,7 @@ import { Input } from "~/components/ui/input";
 export default function Home() {
   const [input, setInput] = useState("I love transformers!");
 
-  const { data, isLoading, mutate } = useTransformers({
+  const { data, isLoading, transformer } = useTransformers({
     task: "sentiment-analysis",
     options: {
       dtype: "q8",
@@ -16,7 +16,7 @@ export default function Home() {
 
   const handleClick = () => {
     if (!input) return;
-    mutate(input);
+    transformer(input);
   };
 
   return (
