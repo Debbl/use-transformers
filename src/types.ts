@@ -3,19 +3,7 @@ import type {
   PipelineType,
   ProgressInfo,
 } from "@huggingface/transformers";
-import type { TransformersEnv } from "./types-shims";
-
-export interface PretrainedModelOptions {
-  progress_callback?: (progress: any) => void;
-  config?: any;
-  cache_dir?: string;
-  local_files_only?: boolean;
-  revision?: string;
-  device?: any;
-  dtype?: any;
-  model_file_name?: string;
-  session_options?: any;
-}
+import type { PretrainedModelOptions, TransformersEnv } from "./types-shims";
 
 export interface PipelineProps<T extends PipelineType = PipelineType> {
   task: T;
