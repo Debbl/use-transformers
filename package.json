@@ -1,7 +1,7 @@
 {
   "name": "use-transformers",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "packageManager": "pnpm@9.14.4",
   "description": "Easily use transformers.js with react in browser",
   "author": "Brendan Dash <me@aiwan.run> (https://aiwan.run)",
