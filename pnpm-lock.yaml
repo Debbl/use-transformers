@@ -14,13 +14,13 @@ importers:
     devDependencies:
       '@debbl/eslint-config':
         specifier: ^3.8.4
-        version: 3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))
+        version: 3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1))
       '@huggingface/transformers':
         specifier: ^3.1.2
         version: 3.1.2
       '@types/node':
         specifier: ^22.10.1
-        version: 22.10.1
+        version: 22.10.2
       '@types/react':
         specifier: ^19.0.0
         version: 19.0.1
@@ -53,7 +53,7 @@ importers:
         version: 5.7.2
       vitest:
         specifier: ^2.1.6
-        version: 2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
+        version: 2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1)
 
   examples/nextjs:
     dependencies:
@@ -105,13 +105,13 @@ importers:
     devDependencies:
       '@debbl/eslint-config':
         specifier: ^3.8.4
-        version: 3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))
+        version: 3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1))
       '@next/bundle-analyzer':
         specifier: ^15.0.3
         version: 15.1.0
       '@types/node':
         specifier: ^22.10.1
-        version: 22.10.1
+        version: 22.10.2
       '@types/react':
         specifier: ^19.0.0
         version: 19.0.1
@@ -289,6 +289,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  '@babel/parser@7.26.3':
+    resolution: {integrity: sha512-WJ/CvmY8Mea8iDXo6a7RK2wbmJITT5fN3BEkRuFlxVyNx8jOKIIhmC4fSkTcPcf8JyavbBwIe6OpiCOBXt/IcA==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   '@babel/plugin-proposal-private-methods@7.18.6':
     resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
     engines: {node: '>=6.9.0'}
@@ -330,6 +335,10 @@ packages:
 
   '@babel/types@7.26.0':
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.26.3':
+    resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
   '@debbl/ahooks@0.3.4':
@@ -1137,9 +1146,6 @@ packages:
 
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
-
-  '@types/node@22.10.1':
-    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
 
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
@@ -4444,6 +4450,9 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -4579,6 +4588,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.0
 
+  '@babel/parser@7.26.3':
+    dependencies:
+      '@babel/types': 7.26.3
+
   '@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
@@ -4636,74 +4649,15 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@babel/types@7.26.3':
+    dependencies:
+      '@babel/helper-string-parser': 7.25.9
+      '@babel/helper-validator-identifier': 7.25.9
+
   '@debbl/ahooks@0.3.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
-
-  '@debbl/eslint-config@3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))':
-    dependencies:
-      '@eslint/markdown': 6.2.1
-      '@next/eslint-plugin-next': 15.0.3
-      '@typescript-eslint/eslint-plugin': 8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      '@typescript-eslint/parser': 8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      eslint: 9.16.0(jiti@1.21.6)
-      eslint-config-prettier: 9.1.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-eslint-comments: 3.2.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-import-x: 4.4.3(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      eslint-plugin-jsdoc: 50.5.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-jsonc: 2.18.2(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-mdx: 3.1.5(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-n: 17.14.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-no-only-tests: 3.3.0
-      eslint-plugin-perfectionist: 3.9.1(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)(vue-eslint-parser@9.4.3(eslint@9.16.0(jiti@1.21.6)))
-      eslint-plugin-prettier: 5.2.1(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@1.21.6)))(eslint@9.16.0(jiti@1.21.6))(prettier@3.3.3)
-      eslint-plugin-react: 7.37.2(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-react-compiler: 19.0.0-beta-37ed2a7-20241206(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-react-hooks: 5.0.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-react-refresh: 0.4.14(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-solid: 0.14.4(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      eslint-plugin-tailwindcss: 3.17.5(tailwindcss@3.4.16)
-      eslint-plugin-toml: 0.11.1(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-unicorn: 56.0.1(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-unused-imports: 4.1.4(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))
-      eslint-plugin-vue: 9.31.0(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-yml: 1.15.0(eslint@9.16.0(jiti@1.21.6))
-      globals: 15.12.0
-      jsonc-eslint-parser: 2.4.0
-      prettier: 3.3.3
-      prettier-plugin-tailwindcss: 0.6.9(prettier@3.3.3)
-      toml-eslint-parser: 0.10.0
-      vue-eslint-parser: 9.4.3(eslint@9.16.0(jiti@1.21.6))
-      yaml-eslint-parser: 1.2.3
-    transitivePeerDependencies:
-      - '@eslint/json'
-      - '@ianvs/prettier-plugin-sort-imports'
-      - '@prettier/plugin-pug'
-      - '@shopify/prettier-plugin-liquid'
-      - '@trivago/prettier-plugin-sort-imports'
-      - '@types/eslint'
-      - '@zackad/prettier-plugin-twig-melody'
-      - astro-eslint-parser
-      - bluebird
-      - prettier-plugin-astro
-      - prettier-plugin-css-order
-      - prettier-plugin-import-sort
-      - prettier-plugin-jsdoc
-      - prettier-plugin-marko
-      - prettier-plugin-multiline-arrays
-      - prettier-plugin-organize-attributes
-      - prettier-plugin-organize-imports
-      - prettier-plugin-sort-imports
-      - prettier-plugin-style-order
-      - prettier-plugin-svelte
-      - supports-color
-      - svelte
-      - svelte-eslint-parser
-      - tailwindcss
-      - typescript
-      - vitest
 
   '@debbl/eslint-config@3.8.4(@types/eslint@8.56.10)(eslint@9.16.0(jiti@1.21.6))(tailwindcss@3.4.16)(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1))':
     dependencies:
@@ -5381,10 +5335,6 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@22.10.1':
-    dependencies:
-      undici-types: 6.20.0
-
   '@types/node@22.10.2':
     dependencies:
       undici-types: 6.20.0
@@ -5543,14 +5493,6 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.6(vite@5.4.11(@types/node@22.10.1))':
-    dependencies:
-      '@vitest/spy': 2.1.6
-      estree-walker: 3.0.3
-      magic-string: 0.30.13
-    optionalDependencies:
-      vite: 5.4.11(@types/node@22.10.1)
-
   '@vitest/mocker@2.1.6(vite@5.4.11(@types/node@22.10.2))':
     dependencies:
       '@vitest/spy': 2.1.6
@@ -5558,7 +5500,6 @@ snapshots:
       magic-string: 0.30.13
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.2)
-    optional: true
 
   '@vitest/pretty-format@2.1.6':
     dependencies:
@@ -6423,12 +6364,12 @@ snapshots:
   eslint-plugin-react-compiler@19.0.0-beta-37ed2a7-20241206(eslint@9.16.0(jiti@1.21.6)):
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/parser': 7.26.2
+      '@babel/parser': 7.26.3
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.26.0)
       eslint: 9.16.0(jiti@1.21.6)
       hermes-parser: 0.25.1
-      zod: 3.23.8
-      zod-validation-error: 3.4.0(zod@3.23.8)
+      zod: 3.24.1
+      zod-validation-error: 3.4.0(zod@3.24.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -6516,17 +6457,6 @@ snapshots:
       eslint: 9.16.0(jiti@1.21.6)
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-
-  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)):
-    dependencies:
-      '@typescript-eslint/utils': 7.18.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      eslint: 9.16.0(jiti@1.21.6)
-    optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      vitest: 2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
 
   eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1)):
     dependencies:
@@ -9079,27 +9009,6 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
-    dependencies:
-      cac: 6.7.14
-      debug: 4.3.7
-      es-module-lexer: 1.5.4
-      pathe: 1.1.2
-      vite: 6.0.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
-    transitivePeerDependencies:
-      - '@types/node'
-      - jiti
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - tsx
-      - yaml
-
   vite-node@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:
       cac: 6.7.14
@@ -9120,16 +9029,6 @@ snapshots:
       - terser
       - tsx
       - yaml
-    optional: true
-
-  vite@5.4.11(@types/node@22.10.1):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.49
-      rollup: 4.28.0
-    optionalDependencies:
-      '@types/node': 22.10.1
-      fsevents: 2.3.3
 
   vite@5.4.11(@types/node@22.10.2):
     dependencies:
@@ -9139,18 +9038,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.10.2
       fsevents: 2.3.3
-    optional: true
-
-  vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
-    dependencies:
-      esbuild: 0.24.0
-      postcss: 8.4.49
-      rollup: 4.28.0
-    optionalDependencies:
-      '@types/node': 22.10.1
-      fsevents: 2.3.3
-      jiti: 1.21.6
-      yaml: 2.6.1
 
   vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:
@@ -9162,44 +9049,6 @@ snapshots:
       fsevents: 2.3.3
       jiti: 1.21.6
       yaml: 2.6.1
-
-  vitest@2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
-    dependencies:
-      '@vitest/expect': 2.1.6
-      '@vitest/mocker': 2.1.6(vite@5.4.11(@types/node@22.10.1))
-      '@vitest/pretty-format': 2.1.6
-      '@vitest/runner': 2.1.6
-      '@vitest/snapshot': 2.1.6
-      '@vitest/spy': 2.1.6
-      '@vitest/utils': 2.1.6
-      chai: 5.1.2
-      debug: 4.3.7
-      expect-type: 1.1.0
-      magic-string: 0.30.13
-      pathe: 1.1.2
-      std-env: 3.8.0
-      tinybench: 2.9.0
-      tinyexec: 0.3.1
-      tinypool: 1.0.2
-      tinyrainbow: 1.2.0
-      vite: 5.4.11(@types/node@22.10.1)
-      vite-node: 2.1.6(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1)
-      why-is-node-running: 2.3.0
-    optionalDependencies:
-      '@types/node': 22.10.1
-    transitivePeerDependencies:
-      - jiti
-      - less
-      - lightningcss
-      - msw
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - tsx
-      - yaml
 
   vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:
@@ -9238,7 +9087,6 @@ snapshots:
       - terser
       - tsx
       - yaml
-    optional: true
 
   vue-eslint-parser@9.4.3(eslint@9.16.0(jiti@1.21.6)):
     dependencies:
@@ -9382,10 +9230,12 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-validation-error@3.4.0(zod@3.23.8):
+  zod-validation-error@3.4.0(zod@3.24.1):
     dependencies:
-      zod: 3.23.8
+      zod: 3.24.1
 
   zod@3.23.8: {}
+
+  zod@3.24.1: {}
 
   zwitch@2.0.4: {}
