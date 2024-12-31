@@ -74,7 +74,7 @@ export function useTransformers<T extends PipelineType>(
   return {
     isReady,
     isLoading,
-    progressInfo,
+    progressInfo: progressInfo as ProgressInfo, // fix build types
     data,
     transformer,
     mutate: setData,
